@@ -1,4 +1,4 @@
-package sync
+package maps
 
 type SyncMap[K comparable, V any] interface {
 	Get(K) V
