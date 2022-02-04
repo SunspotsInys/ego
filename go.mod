@@ -1,3 +1,3 @@
-module github.com/SunspotsInys/ego
+module github.com/inyscc/ego
 
 go 1.18
