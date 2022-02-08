@@ -54,13 +54,7 @@ func (l *logger) write(info string, msg string) (n int, err error) {
 func New(name string, w io.Writer) (l *logger) {
 	name = "[" + name + "]"
 	if w == nil {
-		return &logger{
-			Writer: os.Stdout,
-			name:   name,
-			debug:  name + "[DEBUG][",
-			info:   name + "[INFO][",
-			err:    name + "[ERROR][",
-		}
+		w = os.Stdout
 	}
 	return &logger{
 		Writer: w,
